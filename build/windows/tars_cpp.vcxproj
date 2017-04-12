@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42E458B5-675C-4C50-A0C6-B244927134EB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>tars</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\cpp\framework\AdminRegistryServer\AdminReapThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\AdminRegistryServer\AdminRegistryImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\AdminRegistryServer\AdminRegistryServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\AdminRegistryServer\DbProxy.cpp" />
+    <ClCompile Include="..\..\cpp\framework\AdminRegistryServer\ExecuteTask.cpp" />
+    <ClCompile Include="..\..\cpp\framework\ConfigServer\ConfigImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\ConfigServer\ConfigServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\ConfigServer\main.cpp" />
+    <ClCompile Include="..\..\cpp\framework\LogServer\LogImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\LogServer\LogServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\LogServer\main.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\Activator.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\BatchPatchThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\KeepAliveThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\main.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\NodeImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\NodeRollLogger.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\NodeServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\PlatformInfo.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\RemoveLogThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\ReportMemThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\ServerFactory.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\ServerImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\ServerLimitResource.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\ServerObject.cpp" />
+    <ClCompile Include="..\..\cpp\framework\NodeServer\SingleFileDownloader.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PatchServer\main.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PatchServer\PatchCache.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PatchServer\PatchImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PatchServer\PatchServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PropertyServer\main.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PropertyServer\PropertyDbManager.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PropertyServer\PropertyImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PropertyServer\PropertyReapThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\PropertyServer\PropertyServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\DbProxy.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\DbThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\QueryDbThread.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\QueryImp.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\QueryServer.cpp" />
+    <ClCompile Include="..\..\cpp\framework\QueryPropertyServer\RequestDecoder.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\AdapterProxy.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\AdminServant.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\AppCache.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\Application.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\AppProtocol.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\AsyncProcThread.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\BaseNotify.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\Communicator.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\CommunicatorEpoll.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\CoroutineScheduler.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\EndpointInfo.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\EndpointManager.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\Global.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\NetworkUtil.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\NotifyObserver.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ObjectProxy.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ObjectProxyFactory.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\PropertyReport.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\Servant.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ServantHandle.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ServantHelper.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ServantProxy.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\ServantProxyFactory.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\StatReport.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\TarsConfig.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\TarsCurrent.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\TarsLogger.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\TarsNodeF.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\TarsNotify.cpp" />
+    <ClCompile Include="..\..\cpp\servant\libservant\Transceiver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\cpp\framework\NodeServer\CMakeLists.txt" />
+    <Text Include="..\..\cpp\servant\libservant\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\AdminReapThread.h" />
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\AdminRegistryImp.h" />
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\AdminRegistryServer.h" />
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\DbProxy.h" />
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\ExecuteTask.h" />
+    <ClInclude Include="..\..\cpp\framework\AdminRegistryServer\util.h" />
+    <ClInclude Include="..\..\cpp\framework\ConfigServer\ConfigImp.h" />
+    <ClInclude Include="..\..\cpp\framework\ConfigServer\ConfigServer.h" />
+    <ClInclude Include="..\..\cpp\framework\LogServer\LogImp.h" />
+    <ClInclude Include="..\..\cpp\framework\LogServer\LogServer.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\Activator.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\BatchPatchThread.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandAddFile.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandDestroy.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandLoad.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandNotify.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandPatch.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandStart.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\CommandStop.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\KeepAliveThread.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\NodeImp.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\NodeRollLogger.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\NodeServer.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\PlatformInfo.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\PropertyReporter.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\RegistryProxy.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\RemoveLogThread.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ReportMemThread.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ServerCommand.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ServerFactory.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ServerImp.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ServerLimitResource.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\ServerObject.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\SingleFileDownloader.h" />
+    <ClInclude Include="..\..\cpp\framework\NodeServer\util.h" />
+    <ClInclude Include="..\..\cpp\framework\PatchServer\PatchCache.h" />
+    <ClInclude Include="..\..\cpp\framework\PatchServer\PatchImp.h" />
+    <ClInclude Include="..\..\cpp\framework\PatchServer\PatchServer.h" />
+    <ClInclude Include="..\..\cpp\framework\PropertyServer\PropertyDbManager.h" />
+    <ClInclude Include="..\..\cpp\framework\PropertyServer\PropertyHashMap.h" />
+    <ClInclude Include="..\..\cpp\framework\PropertyServer\PropertyImp.h" />
+    <ClInclude Include="..\..\cpp\framework\PropertyServer\PropertyReapThread.h" />
+    <ClInclude Include="..\..\cpp\framework\PropertyServer\PropertyServer.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\DbProxy.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\DbThread.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\QueryDbThread.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\QueryImp.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\QueryItem.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\QueryServer.h" />
+    <ClInclude Include="..\..\cpp\framework\QueryPropertyServer\RequestDecoder.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_hashmap.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_hashmap_compact.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_multi_hashmap.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_policy.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_queue.h" />
+    <ClInclude Include="..\..\cpp\servant\jmem\jmem_rbtree.h" />
+    <ClInclude Include="..\..\cpp\servant\promise\exception_ptr.h" />
+    <ClInclude Include="..\..\cpp\servant\promise\promise.h" />
+    <ClInclude Include="..\..\cpp\servant\promise\promise_exception.h" />
+    <ClInclude Include="..\..\cpp\servant\promise\tuple.h" />
+    <ClInclude Include="..\..\cpp\servant\promise\when_all.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\AdapterProxy.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\AdminServant.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\AppCache.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Application.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\AppProtocol.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\AsyncProcThread.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\BaseNotify.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Communicator.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\CommunicatorEpoll.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\CommunicatorFactory.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\CoroutineScheduler.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\EndpointInfo.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\EndpointManager.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Global.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Message.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\NetworkUtil.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\NotifyObserver.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ObjectProxy.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ObjectProxyFactory.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\PropertyReport.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Servant.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ServantHandle.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ServantHelper.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ServantProxy.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\ServantProxyFactory.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\StatReport.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\TarsConfig.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\TarsCurrent.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\TarsLogger.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\TarsNodeF.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\TarsNotify.h" />
+    <ClInclude Include="..\..\cpp\servant\servant\Transceiver.h" />
+    <ClInclude Include="..\..\cpp\servant\tup\Tars.h" />
+    <ClInclude Include="..\..\cpp\servant\tup\TarsDisplayer.h" />
+    <ClInclude Include="..\..\cpp\servant\tup\TarsType.h" />
+    <ClInclude Include="..\..\cpp\servant\tup\tup.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
