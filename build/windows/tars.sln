@@ -1,22 +1,174 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tars_cpp", "tars_cpp.vcxproj", "{42E458B5-675C-4C50-A0C6-B244927134EB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "examples", "examples.vcxproj", "{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "framework", "framework", "{47A8696A-FC62-4F30-BEA7-3239697D5153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "servant", "servant", "{25A12944-D16F-4E29-8515-4454FC9A90D3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "servant", "servant.vcxproj", "{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "util", "util", "{5F0BD0AF-4EED-4817-8E79-90CD5EC77573}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\cpp\util\include\util\detail\tc_assert.h = ..\..\cpp\util\include\util\detail\tc_assert.h
+		..\..\cpp\util\include\util\tc_atomic.h = ..\..\cpp\util\include\util\tc_atomic.h
+		..\..\cpp\util\include\util\tc_autoptr.h = ..\..\cpp\util\include\util\tc_autoptr.h
+		..\..\cpp\util\src\tc_base64.cpp = ..\..\cpp\util\src\tc_base64.cpp
+		..\..\cpp\util\include\util\tc_base64.h = ..\..\cpp\util\include\util\tc_base64.h
+		..\..\cpp\util\include\util\tc_bind.h = ..\..\cpp\util\include\util\tc_bind.h
+		..\..\cpp\util\include\util\tc_bind_detail.h = ..\..\cpp\util\include\util\tc_bind_detail.h
+		..\..\cpp\util\src\tc_bitmap.cpp = ..\..\cpp\util\src\tc_bitmap.cpp
+		..\..\cpp\util\include\util\tc_bitmap.h = ..\..\cpp\util\include\util\tc_bitmap.h
+		..\..\cpp\util\include\util\tc_callback.h = ..\..\cpp\util\include\util\tc_callback.h
+		..\..\cpp\util\include\util\tc_callback_detail.h = ..\..\cpp\util\include\util\tc_callback_detail.h
+		..\..\cpp\util\src\tc_cgi.cpp = ..\..\cpp\util\src\tc_cgi.cpp
+		..\..\cpp\util\include\util\tc_cgi.h = ..\..\cpp\util\include\util\tc_cgi.h
+		..\..\cpp\util\include\util\detail\tc_checked_delete.h = ..\..\cpp\util\include\util\detail\tc_checked_delete.h
+		..\..\cpp\util\src\tc_clientsocket.cpp = ..\..\cpp\util\src\tc_clientsocket.cpp
+		..\..\cpp\util\include\util\tc_clientsocket.h = ..\..\cpp\util\include\util\tc_clientsocket.h
+		..\..\cpp\util\src\tc_common.cpp = ..\..\cpp\util\src\tc_common.cpp
+		..\..\cpp\util\include\util\tc_common.h = ..\..\cpp\util\include\util\tc_common.h
+		..\..\cpp\util\src\tc_config.cpp = ..\..\cpp\util\src\tc_config.cpp
+		..\..\cpp\util\include\util\tc_config.h = ..\..\cpp\util\include\util\tc_config.h
+		..\..\cpp\util\include\util\tc_consistent_hash.h = ..\..\cpp\util\include\util\tc_consistent_hash.h
+		..\..\cpp\util\include\util\tc_consistent_hash_new.h = ..\..\cpp\util\include\util\tc_consistent_hash_new.h
+		..\..\cpp\util\src\tc_dyn_object.cpp = ..\..\cpp\util\src\tc_dyn_object.cpp
+		..\..\cpp\util\include\util\tc_dyn_object.h = ..\..\cpp\util\include\util\tc_dyn_object.h
+		..\..\cpp\util\include\util\tc_enable_shared_from_this.h = ..\..\cpp\util\include\util\tc_enable_shared_from_this.h
+		..\..\cpp\util\src\tc_encoder.cpp = ..\..\cpp\util\src\tc_encoder.cpp
+		..\..\cpp\util\include\util\tc_encoder.h = ..\..\cpp\util\include\util\tc_encoder.h
+		..\..\cpp\util\src\tc_epoll_server.cpp = ..\..\cpp\util\src\tc_epoll_server.cpp
+		..\..\cpp\util\include\util\tc_epoll_server.h = ..\..\cpp\util\include\util\tc_epoll_server.h
+		..\..\cpp\util\src\tc_epoller.cpp = ..\..\cpp\util\src\tc_epoller.cpp
+		..\..\cpp\util\include\util\tc_epoller.h = ..\..\cpp\util\include\util\tc_epoller.h
+		..\..\cpp\util\include\util\tc_eventfd.h = ..\..\cpp\util\include\util\tc_eventfd.h
+		..\..\cpp\util\src\tc_ex.cpp = ..\..\cpp\util\src\tc_ex.cpp
+		..\..\cpp\util\include\util\tc_ex.h = ..\..\cpp\util\include\util\tc_ex.h
+		..\..\cpp\util\include\util\tc_fcontext.h = ..\..\cpp\util\include\util\tc_fcontext.h
+		..\..\cpp\util\include\util\tc_fcontext_i386.h = ..\..\cpp\util\include\util\tc_fcontext_i386.h
+		..\..\cpp\util\include\util\tc_fcontext_x86_64.h = ..\..\cpp\util\include\util\tc_fcontext_x86_64.h
+		..\..\cpp\util\src\tc_fifo.cpp = ..\..\cpp\util\src\tc_fifo.cpp
+		..\..\cpp\util\include\util\tc_fifo.h = ..\..\cpp\util\include\util\tc_fifo.h
+		..\..\cpp\util\src\tc_file.cpp = ..\..\cpp\util\src\tc_file.cpp
+		..\..\cpp\util\include\util\tc_file.h = ..\..\cpp\util\include\util\tc_file.h
+		..\..\cpp\util\src\tc_file_mutex.cpp = ..\..\cpp\util\src\tc_file_mutex.cpp
+		..\..\cpp\util\include\util\tc_file_mutex.h = ..\..\cpp\util\include\util\tc_file_mutex.h
+		..\..\cpp\util\include\util\tc_functor.h = ..\..\cpp\util\include\util\tc_functor.h
+		..\..\cpp\util\src\tc_gzip.cpp = ..\..\cpp\util\src\tc_gzip.cpp
+		..\..\cpp\util\include\util\tc_gzip.h = ..\..\cpp\util\include\util\tc_gzip.h
+		..\..\cpp\util\include\util\tc_hash_fun.h = ..\..\cpp\util\include\util\tc_hash_fun.h
+		..\..\cpp\util\src\tc_hashmap.cpp = ..\..\cpp\util\src\tc_hashmap.cpp
+		..\..\cpp\util\include\util\tc_hashmap.h = ..\..\cpp\util\include\util\tc_hashmap.h
+		..\..\cpp\util\src\tc_hashmap_compact.cpp = ..\..\cpp\util\src\tc_hashmap_compact.cpp
+		..\..\cpp\util\include\util\tc_hashmap_compact.h = ..\..\cpp\util\include\util\tc_hashmap_compact.h
+		..\..\cpp\util\src\tc_http.cpp = ..\..\cpp\util\src\tc_http.cpp
+		..\..\cpp\util\include\util\tc_http.h = ..\..\cpp\util\include\util\tc_http.h
+		..\..\cpp\util\src\tc_http_async.cpp = ..\..\cpp\util\src\tc_http_async.cpp
+		..\..\cpp\util\include\util\tc_http_async.h = ..\..\cpp\util\include\util\tc_http_async.h
+		..\..\cpp\util\src\tc_jump_i386_sysv_elf_gas.s = ..\..\cpp\util\src\tc_jump_i386_sysv_elf_gas.s
+		..\..\cpp\util\src\tc_jump_x86_64_sysv_elf_gas.s = ..\..\cpp\util\src\tc_jump_x86_64_sysv_elf_gas.s
+		..\..\cpp\util\include\util\tc_lock.h = ..\..\cpp\util\include\util\tc_lock.h
+		..\..\cpp\util\src\tc_logger.cpp = ..\..\cpp\util\src\tc_logger.cpp
+		..\..\cpp\util\include\util\tc_logger.h = ..\..\cpp\util\include\util\tc_logger.h
+		..\..\cpp\util\include\util\tc_loki.h = ..\..\cpp\util\include\util\tc_loki.h
+		..\..\cpp\util\include\util\tc_loop_queue.h = ..\..\cpp\util\include\util\tc_loop_queue.h
+		..\..\cpp\util\src\tc_make_i386_sysv_elf_gas.s = ..\..\cpp\util\src\tc_make_i386_sysv_elf_gas.s
+		..\..\cpp\util\src\tc_make_x86_64_sysv_elf_gas.s = ..\..\cpp\util\src\tc_make_x86_64_sysv_elf_gas.s
+		..\..\cpp\util\src\tc_malloc_chunk.cpp = ..\..\cpp\util\src\tc_malloc_chunk.cpp
+		..\..\cpp\util\include\util\tc_malloc_chunk.h = ..\..\cpp\util\include\util\tc_malloc_chunk.h
+		..\..\cpp\util\src\tc_md5.cpp = ..\..\cpp\util\src\tc_md5.cpp
+		..\..\cpp\util\include\util\tc_md5.h = ..\..\cpp\util\include\util\tc_md5.h
+		..\..\cpp\util\src\tc_mem_chunk.cpp = ..\..\cpp\util\src\tc_mem_chunk.cpp
+		..\..\cpp\util\include\util\tc_mem_chunk.h = ..\..\cpp\util\include\util\tc_mem_chunk.h
+		..\..\cpp\util\src\tc_mem_queue.cpp = ..\..\cpp\util\src\tc_mem_queue.cpp
+		..\..\cpp\util\include\util\tc_mem_queue.h = ..\..\cpp\util\include\util\tc_mem_queue.h
+		..\..\cpp\util\include\util\tc_mem_vector.h = ..\..\cpp\util\include\util\tc_mem_vector.h
+		..\..\cpp\util\src\tc_mmap.cpp = ..\..\cpp\util\src\tc_mmap.cpp
+		..\..\cpp\util\include\util\tc_mmap.h = ..\..\cpp\util\include\util\tc_mmap.h
+		..\..\cpp\util\include\util\tc_monitor.h = ..\..\cpp\util\include\util\tc_monitor.h
+		..\..\cpp\util\src\tc_multi_hashmap.cpp = ..\..\cpp\util\src\tc_multi_hashmap.cpp
+		..\..\cpp\util\include\util\tc_multi_hashmap.h = ..\..\cpp\util\include\util\tc_multi_hashmap.h
+		..\..\cpp\util\src\tc_mysql.cpp = ..\..\cpp\util\src\tc_mysql.cpp
+		..\..\cpp\util\include\util\tc_mysql.h = ..\..\cpp\util\include\util\tc_mysql.h
+		..\..\cpp\util\src\tc_option.cpp = ..\..\cpp\util\src\tc_option.cpp
+		..\..\cpp\util\include\util\tc_option.h = ..\..\cpp\util\include\util\tc_option.h
+		..\..\cpp\util\src\tc_pack.cpp = ..\..\cpp\util\src\tc_pack.cpp
+		..\..\cpp\util\include\util\tc_pack.h = ..\..\cpp\util\include\util\tc_pack.h
+		..\..\cpp\util\src\tc_parsepara.cpp = ..\..\cpp\util\src\tc_parsepara.cpp
+		..\..\cpp\util\include\util\tc_parsepara.h = ..\..\cpp\util\include\util\tc_parsepara.h
+		..\..\cpp\util\src\tc_rbtree.cpp = ..\..\cpp\util\src\tc_rbtree.cpp
+		..\..\cpp\util\include\util\tc_rbtree.h = ..\..\cpp\util\include\util\tc_rbtree.h
+		..\..\cpp\util\include\util\tc_readers_writer_data.h = ..\..\cpp\util\include\util\tc_readers_writer_data.h
+		..\..\cpp\util\include\util\tc_scoped_ptr.h = ..\..\cpp\util\include\util\tc_scoped_ptr.h
+		..\..\cpp\util\src\tc_sem_mutex.cpp = ..\..\cpp\util\src\tc_sem_mutex.cpp
+		..\..\cpp\util\include\util\tc_sem_mutex.h = ..\..\cpp\util\include\util\tc_sem_mutex.h
+		..\..\cpp\util\include\util\detail\tc_shared_count_base.h = ..\..\cpp\util\include\util\detail\tc_shared_count_base.h
+		..\..\cpp\util\include\util\detail\tc_shared_count_impl.h = ..\..\cpp\util\include\util\detail\tc_shared_count_impl.h
+		..\..\cpp\util\include\util\tc_shared_ptr.h = ..\..\cpp\util\include\util\tc_shared_ptr.h
+		..\..\cpp\util\src\tc_shm.cpp = ..\..\cpp\util\src\tc_shm.cpp
+		..\..\cpp\util\include\util\tc_shm.h = ..\..\cpp\util\include\util\tc_shm.h
+		..\..\cpp\util\include\util\tc_singleton.h = ..\..\cpp\util\include\util\tc_singleton.h
+		..\..\cpp\util\src\tc_socket.cpp = ..\..\cpp\util\src\tc_socket.cpp
+		..\..\cpp\util\include\util\tc_socket.h = ..\..\cpp\util\include\util\tc_socket.h
+		..\..\cpp\util\include\util\tc_squeue.h = ..\..\cpp\util\include\util\tc_squeue.h
+		..\..\cpp\util\include\util\detail\tc_template_util.h = ..\..\cpp\util\include\util\detail\tc_template_util.h
+		..\..\cpp\util\src\tc_thread.cpp = ..\..\cpp\util\src\tc_thread.cpp
+		..\..\cpp\util\include\util\tc_thread.h = ..\..\cpp\util\include\util\tc_thread.h
+		..\..\cpp\util\src\tc_thread_cond.cpp = ..\..\cpp\util\src\tc_thread_cond.cpp
+		..\..\cpp\util\include\util\tc_thread_cond.h = ..\..\cpp\util\include\util\tc_thread_cond.h
+		..\..\cpp\util\src\tc_thread_mutex.cpp = ..\..\cpp\util\src\tc_thread_mutex.cpp
+		..\..\cpp\util\include\util\tc_thread_mutex.h = ..\..\cpp\util\include\util\tc_thread_mutex.h
+		..\..\cpp\util\src\tc_thread_pool.cpp = ..\..\cpp\util\src\tc_thread_pool.cpp
+		..\..\cpp\util\include\util\tc_thread_pool.h = ..\..\cpp\util\include\util\tc_thread_pool.h
+		..\..\cpp\util\include\util\tc_thread_queue.h = ..\..\cpp\util\include\util\tc_thread_queue.h
+		..\..\cpp\util\src\tc_thread_rwlock.cpp = ..\..\cpp\util\src\tc_thread_rwlock.cpp
+		..\..\cpp\util\include\util\tc_thread_rwlock.h = ..\..\cpp\util\include\util\tc_thread_rwlock.h
+		..\..\cpp\util\include\util\tc_timeout_queue.h = ..\..\cpp\util\include\util\tc_timeout_queue.h
+		..\..\cpp\util\include\util\tc_timeout_queue_map.h = ..\..\cpp\util\include\util\tc_timeout_queue_map.h
+		..\..\cpp\util\include\util\tc_timeout_queue_new.h = ..\..\cpp\util\include\util\tc_timeout_queue_new.h
+		..\..\cpp\util\include\util\tc_timeout_queue_noid.h = ..\..\cpp\util\include\util\tc_timeout_queue_noid.h
+		..\..\cpp\util\src\tc_timeprovider.cpp = ..\..\cpp\util\src\tc_timeprovider.cpp
+		..\..\cpp\util\include\util\tc_timeprovider.h = ..\..\cpp\util\include\util\tc_timeprovider.h
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{42E458B5-675C-4C50-A0C6-B244927134EB}.Debug|Win32.ActiveCfg = Debug|Win32
 		{42E458B5-675C-4C50-A0C6-B244927134EB}.Debug|Win32.Build.0 = Debug|Win32
+		{42E458B5-675C-4C50-A0C6-B244927134EB}.Debug|x64.ActiveCfg = Debug|Win32
 		{42E458B5-675C-4C50-A0C6-B244927134EB}.Release|Win32.ActiveCfg = Release|Win32
 		{42E458B5-675C-4C50-A0C6-B244927134EB}.Release|Win32.Build.0 = Release|Win32
+		{42E458B5-675C-4C50-A0C6-B244927134EB}.Release|x64.ActiveCfg = Release|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Debug|Win32.Build.0 = Debug|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Debug|x64.ActiveCfg = Debug|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Release|Win32.ActiveCfg = Release|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Release|Win32.Build.0 = Release|Win32
+		{1DF1C3D3-34CF-4951-B85F-0BBA82A40255}.Release|x64.ActiveCfg = Release|Win32
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Debug|Win32.Build.0 = Debug|Win32
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Debug|x64.ActiveCfg = Debug|x64
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Debug|x64.Build.0 = Debug|x64
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Release|Win32.ActiveCfg = Release|Win32
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Release|Win32.Build.0 = Release|Win32
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Release|x64.ActiveCfg = Release|x64
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF263762-6B37-4A07-971C-5D9D6DDE9C5A} = {25A12944-D16F-4E29-8515-4454FC9A90D3}
 	EndGlobalSection
 EndGlobal

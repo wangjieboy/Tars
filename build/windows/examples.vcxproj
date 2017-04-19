@@ -76,6 +76,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\cpp\examples\QuickStartDemo\HelloServer\HelloImp.cpp" />
+    <ClCompile Include="..\..\cpp\examples\QuickStartDemo\HelloServer\HelloServer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\cpp\examples\QuickStartDemo\HelloServer\HelloImp.h" />
+    <ClInclude Include="..\..\cpp\examples\QuickStartDemo\HelloServer\HelloServer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
