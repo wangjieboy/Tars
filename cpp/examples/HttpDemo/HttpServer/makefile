@@ -1,7 +1,9 @@
 
 #-----------------------------------------------------------------------
 
-APP       := TestApp
+SLN_DIR   :=$(shell (cd ../../../../; pwd))
+
+APP       := HttpDemo
 TARGET    := HttpServer
 CONFIG    := 
 STRIP_FLAG:= N
@@ -9,6 +11,8 @@ STRIP_FLAG:= N
 INCLUDE   += 
 LIB       += 
 
-#-----------------------------------------------------------------------i
+#-----------------------------------------------------------------------
 
-include /usr/local/tars/cpp/makefile/makefile.tars
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
+
+#-----------------------------------------------------------------------
