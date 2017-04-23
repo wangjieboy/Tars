@@ -26,7 +26,7 @@ echo "[create server: $APP.$SERVER ...]"
 
 DEMO_PATH=/usr/local/tars/cpp/script/demo
 if [ ! -d "${DEMO_PATH}" ];then
-	DEMO_PATH="`pwd`/demo"
+	DEMO_PATH="`dirname $0`/demo"
 fi
 
 echo "DEMO_PATH: ${DEMO_PATH}"
