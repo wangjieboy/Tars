@@ -1,7 +1,12 @@
 
 # -------------------------------------------------------------------------------
+# SLN_DIR由编译模块传入
+ifndef SLN_DIR
+	@echo -e "ERROR: SLN_DIR not defined.\n"
+	@exit 1
+endif
 
-TARS_PATH    :=/usr/local/tars/cpp
+TARS_PATH    := $(SLN_DIR)/cpp
 
 #-------------------------------------------------------------------------------
 
@@ -11,7 +16,7 @@ CFLAGS      += -g -O2 -Wno-deprecated -Wall
 
 #-------------------------------------------------------------------------------
 
-TARS2CPP     := ${TARS_PATH}/tools/tars2cpp ${TARS2CPP_FLAG}
+TARS2CPP     := ${TARS_PATH}/tools/tars2cpp/tars2cpp ${TARS2CPP_FLAG}
 
 #-------------------------------------------------------------------------------
 
@@ -30,8 +35,17 @@ MYSQL_INC       += -I/usr/local/mysql/include/mysql -I/usr/local/mysql/include -
 MYSQL_LIB_DIR   += -L/usr/local/mysql/lib/mysql -L/usr/local/mysql/lib -L/usr/lib/mysql
 LIB_DIR         += ${MYSQL_LIB_DIR}
 
-INCLUDE         += -I${TARS_PATH}/include -I./ ${MYSQL_INC}
-LIB             += -L${TARS_PATH}/lib -ltarsservant -ltarsparse -ltarsutil -lpthread ${LIB_DIR}
+#INCLUDE         += -I${TARS_PATH}/include -I./ ${MYSQL_INC}
+UTIL_INC		+= ${TARS_PATH}/util/include
+SERVANT_INC		+= ${TARS_PATH}/servant
+
+INCLUDE         += -I${SERVANT_INC} -I${UTIL_INC} -I./ ${MYSQL_INC}
+
+SERVANT_LIB		+= ${TARS_PATH}/servant/lib
+UTIL_LIB		+= ${TARS_PATH}/util/lib
+TARSPARSE_LIB	+= ${TARS_PATH}/tools/lib
+
+LIB             += -L${TARS_PATH}/lib -L${SERVANT_LIB} -L${UTIL_LIB} -L${TARSPARSE_LIB} -ltarsservant -ltarsparse -ltarsutil -lpthread ${LIB_DIR}
 
 #-----------------------------------------------------------------------------
 
@@ -107,6 +121,7 @@ $(TARS_H) : $(TARS_SRC)
 	@echo "tars2cpp ${TARS2CPP_FLAG} "
 	rm -vf $(TARS_H)
 	@echo "tars2cpp ${TARS2CPP_FLAG} "
+	@echo "    @CREATING PROTOCOL SOURCE FOR ${TARS_SRC}"
 	$(TARS2CPP) ${TARS2CPP_FLAG} $(TARS_SRC)
 
 #endif
@@ -163,6 +178,7 @@ HELP_CLEANALL = "\n\e[1;33mcleanall\e[0m:\t[clean & rm .*.d]"
 HELP_TAR      = "\n\e[1;33mtar\e[0m:\t\t[will do 'tar $(TARGET).tgz $(RELEASE_FILE)']"
 
 help:
+	@echo -e "TARS_PATH: $(TARS_PATH)\n"
 	@echo -e $(HELP)"\n"
 
 #----------------------------------------------------------------------------------

@@ -1,16 +1,18 @@
 
 #-----------------------------------------------------------------------
 
-APP       := Test
+SLN_DIR   :=$(shell (cd ../../../../; pwd))
+
+APP       := TestApp
 TARGET    := TarsStressClient
 CONFIG    := 
 STRIP_FLAG:= N
 
-INCLUDE   += 
+INCLUDE   += -I ../TarsStressServer
 LIB       += 
 
 #-----------------------------------------------------------------------
-include /home/tarsproto/Test/TarsStressServer/TarsStressServer.mk
-include /usr/local/tars/cpp/makefile/makefile.tars
+
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
 
 #-----------------------------------------------------------------------

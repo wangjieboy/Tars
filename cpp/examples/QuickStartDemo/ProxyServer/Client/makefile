@@ -1,17 +1,18 @@
 
 #-----------------------------------------------------------------------
 
+SLN_DIR   :=$(shell (cd ../../../../../; pwd))
+
 APP       := TestApp
-TARGET    := TestProxy
+TARGET    := ProxyClient
 CONFIG    := 
 STRIP_FLAG:= N
 
-INCLUDE   += 
+INCLUDE   += -I ..
 LIB       += 
 
 #-----------------------------------------------------------------------
 
-include /home/tarsproto/TestApp/ProxyServer/ProxyServer.mk
-include /usr/local/tars/cpp/makefile/makefile.tars
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
 
 #-----------------------------------------------------------------------

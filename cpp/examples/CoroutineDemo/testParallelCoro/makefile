@@ -1,12 +1,18 @@
 
 #-----------------------------------------------------------------------
-APP       := Test
-TARGET    := testCoro
+
+SLN_DIR   :=$(shell (cd ../../../../; pwd))
+
+APP       := TestApp
+TARGET    := testParallelCoro
 CONFIG    := 
 STRIP_FLAG:= N
 
 INCLUDE   +=
+LIB       += 
 
 #-----------------------------------------------------------------------
-include /usr/local/tars/cpp/makefile/makefile.tars
+
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
+
 #-----------------------------------------------------------------------

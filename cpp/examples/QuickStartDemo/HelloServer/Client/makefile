@@ -1,16 +1,18 @@
 
 #-----------------------------------------------------------------------
 
+SLN_DIR   :=$(shell (cd ../../../../../; pwd))
+
 APP       := TestApp
-TARGET    := TestHelloServer
+TARGET    := HelloClient
 CONFIG    := 
 STRIP_FLAG:= N
 
-INCLUDE   += 
+INCLUDE   += -I ..
 LIB       += 
 
 #-----------------------------------------------------------------------
 
-include /home/tarsproto/TestApp/HelloServer/HelloServer.mk
-include /usr/local/tars/cpp/makefile/makefile.tars
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
+
 #-----------------------------------------------------------------------

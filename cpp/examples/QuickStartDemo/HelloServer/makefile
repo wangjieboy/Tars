@@ -1,6 +1,8 @@
 
 #-----------------------------------------------------------------------
 
+SLN_DIR   :=$(shell (cd ../../../../; pwd))
+
 APP       := TestApp
 TARGET    := HelloServer
 CONFIG    := 
@@ -11,6 +13,6 @@ LIB       +=
 
 #-----------------------------------------------------------------------
 
-include /usr/local/tars/cpp/makefile/makefile.tars
+include ${SLN_DIR}/cpp/servant/makefile/makefile.tars
 
 #-----------------------------------------------------------------------
